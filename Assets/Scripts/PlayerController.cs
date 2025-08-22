@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            m_Rigidbody.velocity = Vector3.zero;
+            m_Rigidbody.linearVelocity = Vector3.zero;
         }
 
 #elif UNITY_IOS || UNITY_ANDROID
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
         }
 #endif
         // apply animation
-        m_AnimatorController.SetFloat(m_VelocityHash, m_Rigidbody.velocity.magnitude);
+        m_AnimatorController.SetFloat(m_VelocityHash, m_Rigidbody.linearVelocity.magnitude);
     }
 
     void MoveToPosition(Vector2 screenPosition)
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
         movementDirection.Normalize();
 
         // apply calculated velocity
-        m_Rigidbody.velocity = movementDirection * m_MovementSpeed;
+        m_Rigidbody.linearVelocity = movementDirection * m_MovementSpeed;
     }
 
     public void SetMovementSpeed(float speed)
