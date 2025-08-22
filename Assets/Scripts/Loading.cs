@@ -79,6 +79,11 @@ public class Loading : MonoBehaviour
             Debug.LogError("InsideGoToNextLevel()");
             Addressables.LoadSceneAsync("Level_0" + "2", UnityEngine.SceneManagement.LoadSceneMode.Single, true);
         }
+        else
+        {
+            Debug.LogWarning("Remote config not set, proceeding with Default behavior...");
+            Addressables.LoadSceneAsync("Level_0" + GameManager.s_CurrentLevel, UnityEngine.SceneManagement.LoadSceneMode.Single, true);
+        }
     }
 
     private void Update()
