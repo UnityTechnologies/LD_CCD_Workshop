@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3976da977cb49238499ea3b4c237ae, type: 3}
+  m_Name: ProfileDataSourceSettings
+  m_EditorClassIdentifier: 
+  profileGroupTypes:
+  - m_GroupTypePrefix: Automatic
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge
+    - m_Suffix: EnvironmentName
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://be56a657-998d-48eb-90bb-b32afeaca892.client-api.unity3dusercontent.com/client_api/v1/environments/{CcdManager.EnvironmentName}/buckets/{CcdManager.BucketId}/release_by_badge/{CcdManager.Badge}/entry_by_path/content/?path=
+  - m_GroupTypePrefix: Built-In
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    - m_Suffix: LoadPath
+      m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+  - m_GroupTypePrefix: CCD.be56a657-998d-48eb-90bb-b32afeaca892.0d3204d7-8677-4d3c-a2ce-0986c7e61a26.76d7c7d4-b095-4c57-bd9e-697818b55e4e.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/0d3204d7-8677-4d3c-a2ce-0986c7e61a26/76d7c7d4-b095-4c57-bd9e-697818b55e4e/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: 76d7c7d4-b095-4c57-bd9e-697818b55e4e
+    - m_Suffix: CcdBucketName
+      m_Value: CCD_Workshop
+    - m_Suffix: Environmentid
+      m_Value: 0d3204d7-8677-4d3c-a2ce-0986c7e61a26
+    - m_Suffix: Environmentname
+      m_Value: development
+    - m_Suffix: LoadPath
+      m_Value: https://be56a657-998d-48eb-90bb-b32afeaca892.client-api.unity3dusercontent.com/client_api/v1/environments/development/buckets/76d7c7d4-b095-4c57-bd9e-697818b55e4e/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  - m_GroupTypePrefix: CCD.be56a657-998d-48eb-90bb-b32afeaca892.0d3204d7-8677-4d3c-a2ce-0986c7e61a26.f1044114-42cd-4106-81f7-8bd7afc88bf6.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/0d3204d7-8677-4d3c-a2ce-0986c7e61a26/f1044114-42cd-4106-81f7-8bd7afc88bf6/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: f1044114-42cd-4106-81f7-8bd7afc88bf6
+    - m_Suffix: CcdBucketName
+      m_Value: CCD_2_
+    - m_Suffix: Environmentid
+      m_Value: 0d3204d7-8677-4d3c-a2ce-0986c7e61a26
+    - m_Suffix: Environmentname
+      m_Value: development
+    - m_Suffix: LoadPath
+      m_Value: https://be56a657-998d-48eb-90bb-b32afeaca892.client-api.unity3dusercontent.com/client_api/v1/environments/development/buckets/f1044114-42cd-4106-81f7-8bd7afc88bf6/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  - m_GroupTypePrefix: CCD.be56a657-998d-48eb-90bb-b32afeaca892.28dc5cbc-2183-4efb-8ea7-3fb99177f3aa.5f1c656f-fe46-4c4e-a233-3f898998e682.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/28dc5cbc-2183-4efb-8ea7-3fb99177f3aa/5f1c656f-fe46-4c4e-a233-3f898998e682/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: 5f1c656f-fe46-4c4e-a233-3f898998e682
+    - m_Suffix: CcdBucketName
+      m_Value: CCD_Workshop
+    - m_Suffix: Environmentid
+      m_Value: 28dc5cbc-2183-4efb-8ea7-3fb99177f3aa
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://be56a657-998d-48eb-90bb-b32afeaca892.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/5f1c656f-fe46-4c4e-a233-3f898998e682/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  environments:
+  - id: 0d3204d7-8677-4d3c-a2ce-0986c7e61a26
+    projectId: be56a657-998d-48eb-90bb-b32afeaca892
+    projectGenesisId: be56a657-998d-48eb-90bb-b32afeaca892
+    name: development
+    isDefault: 0
+  - id: 28dc5cbc-2183-4efb-8ea7-3fb99177f3aa
+    projectId: be56a657-998d-48eb-90bb-b32afeaca892
+    projectGenesisId: be56a657-998d-48eb-90bb-b32afeaca892
+    name: production
+    isDefault: 1
+  currentEnvironment:
+    id: 
+    projectId: 
+    projectGenesisId: 
+    name: 
+    isDefault: 0
