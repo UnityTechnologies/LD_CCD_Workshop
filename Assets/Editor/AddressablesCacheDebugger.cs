@@ -18,6 +18,7 @@ public class AddressablesCacheDebugger : EditorWindow
 
         // Current cache path
         GUILayout.Label("Current cache path:");
+
         GUILayout.TextField(Caching.currentCacheForWriting.path);
 
         GUILayout.Space(10);
@@ -30,7 +31,17 @@ public class AddressablesCacheDebugger : EditorWindow
         Caching.GetAllCachePaths(cachePaths);
         foreach (var path in cachePaths)
         {
+            GUILayout.BeginHorizontal();
+
             GUILayout.TextField(path);
+            if (GUILayout.Button("<-- Clear this Cache"))
+            {
+                bool cleared = 
+                    Caching.currentCacheForWriting.ClearCache();
+                Debug.Log("Cleared cache: " + cleared);
+            }
+
+            GUILayout.EndHorizontal();
         }
 
         GUILayout.Space(10);

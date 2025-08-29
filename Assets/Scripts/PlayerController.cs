@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         m_HasKey = true;
 
         //TODO: Put this outside of the PlayerController
-        GameObject.FindObjectOfType<GameplayUI>().KeyCollected();
+        FindFirstObjectByType<GameplayUI>().KeyCollected();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -122,10 +122,11 @@ public class PlayerController : MonoBehaviour
         {
             ApplyMoveToPosition();
         }
-		// Did we click on something else thats not the ground? If so find where that object is
+
+        // Did we click on something else thats not the ground? If so find where that object is
         else if (Physics.Raycast(ray, out m_HitInfo, Mathf.Infinity))
         {
-            Ray downRay = new Ray(m_HitInfo.point, Vector3.down);
+            Ray downRay = new(m_HitInfo.point, Vector3.down);
 
             // And now cast down to find the ground point to move to
             if (Physics.Raycast(downRay, out m_HitInfo, Mathf.Infinity, m_InputCollisionLayer))
