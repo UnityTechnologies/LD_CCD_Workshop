@@ -63,32 +63,45 @@ public class Loading : MonoBehaviour
     {
         if(ApplyRemoteConfigSettings.Instance.season == "Default")
         {
-            Addressables.LoadSceneAsync("Level_0" + GameManager.s_CurrentLevel, UnityEngine.SceneManagement.LoadSceneMode.Single, true);
+            Addressables.LoadSceneAsync(
+                "Level_0" + GameManager.s_CurrentLevel,
+                UnityEngine.SceneManagement.LoadSceneMode.Single,
+                true);
         }
         
         // Else If the season is supposed to be Winter
         else if (ApplyRemoteConfigSettings.Instance.season == "Winter")
         {
             Debug.LogError("InsideGoToNextLevel()");
-            Addressables.LoadSceneAsync("Level_0" + "4", UnityEngine.SceneManagement.LoadSceneMode.Single, true);
+            Addressables.LoadSceneAsync(
+                "Level_0" + "4",
+                UnityEngine.SceneManagement.LoadSceneMode.Single,
+                true);
         }
 
         // Else If the season is supposed to be Halloween
         else if (ApplyRemoteConfigSettings.Instance.season == "Halloween")
         {
             Debug.LogError("InsideGoToNextLevel()");
-            Addressables.LoadSceneAsync("Level_0" + "2", UnityEngine.SceneManagement.LoadSceneMode.Single, true);
+            Addressables.LoadSceneAsync(
+                "Level_0" + "2",
+                UnityEngine.SceneManagement.LoadSceneMode.Single,
+                true);
         }
         else
         {
             Debug.LogWarning("Remote config not set, proceeding with Default behavior...");
-            Addressables.LoadSceneAsync("Level_0" + GameManager.s_CurrentLevel, UnityEngine.SceneManagement.LoadSceneMode.Single, true);
+            Addressables.LoadSceneAsync(
+                "Level_0" + GameManager.s_CurrentLevel,
+                UnityEngine.SceneManagement.LoadSceneMode.Single,
+                true);
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        // We don't need to check for this value every single frame, and certainly not after the scene has been loaded
+        // We don't need to check for this value every single frame,
+        // and certainly not after the scene has been loaded
         m_LoadingSlider.value = m_SceneHandle.GetDownloadStatus().Percent;
     }
 }

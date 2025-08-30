@@ -58,7 +58,9 @@ public class Store : MonoBehaviour
             GameManager.s_ActiveHat = 0;
 
             //TODO: Position it on the Dino's head
-            m_HatHandle = Addressables.InstantiateAsync("Hat0" + GameManager.s_ActiveHat, m_HatAttachPoint);
+            m_HatHandle = Addressables.InstantiateAsync(
+                "Hat0" + GameManager.s_ActiveHat,
+                m_HatAttachPoint);
 
             ShowHatSelectionUI();
         }
@@ -81,7 +83,9 @@ public class Store : MonoBehaviour
             GameManager.s_ActiveHat = 0;
         }
 
-        m_HatHandle = Addressables.InstantiateAsync("Hat0" + GameManager.s_ActiveHat, m_HatAttachPoint);
+        m_HatHandle = Addressables.InstantiateAsync(
+            "Hat0" + GameManager.s_ActiveHat,
+            m_HatAttachPoint);
     }
 
     public void PreviousHat()
@@ -98,7 +102,9 @@ public class Store : MonoBehaviour
             GameManager.s_ActiveHat = 3;
         }
 
-        m_HatHandle = Addressables.InstantiateAsync("Hat0" + GameManager.s_ActiveHat, m_HatAttachPoint);
+        m_HatHandle = Addressables.InstantiateAsync(
+            "Hat0" + GameManager.s_ActiveHat,
+            m_HatAttachPoint);
     }
 
     public void ClearAddressablesCache()

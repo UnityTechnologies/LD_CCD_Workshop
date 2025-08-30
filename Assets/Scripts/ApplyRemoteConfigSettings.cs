@@ -79,7 +79,7 @@ public class ApplyRemoteConfigSettings : MonoBehaviour
         await InitializeRemoteConfigAsync();
 
         // Set-up for how to send a custom Struct value
-        userAttributes uaStruct = new userAttributes();
+        userAttributes uaStruct = new();
 
         // Can also be saved via Cloud Save or a Server 
         uaStruct.score = 10;
@@ -140,7 +140,9 @@ public class ApplyRemoteConfigSettings : MonoBehaviour
     // Public function for access outside of the class
     public void FetchConfigs()
     {
-        RemoteConfigService.Instance.FetchConfigs<userAttributes, appAttributes>(new userAttributes(){}, new appAttributes(){});
+        RemoteConfigService.Instance.FetchConfigs(
+            new userAttributes(){},
+            new appAttributes(){});
 
         RemoteConfigService.Instance.FetchCompleted += RemoteConfigLoaded;
     }

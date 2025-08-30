@@ -12,26 +12,26 @@ public class AddressablesCacheDebugger : EditorWindow
 
     void OnGUI()
     {
-        GUILayout.Label("Unity Caching Info", EditorStyles.boldLabel);
+        EditorGUILayout.LabelField("Unity Caching Info", EditorStyles.boldLabel);
 
-        GUILayout.Space(5);
+        EditorGUILayout.Space(5);
 
         // Current cache path
-        GUILayout.Label("Current cache path:");
+        EditorGUILayout.LabelField("Current cache path:");
 
-        GUILayout.TextField(Caching.currentCacheForWriting.path);
+        EditorGUILayout.TextField(Caching.currentCacheForWriting.path);
 
-        GUILayout.Space(10);
+        EditorGUILayout.Space(10);
 
         // All cache paths
-        GUILayout.Label("All cache paths:");
+        EditorGUILayout.LabelField("All cache paths:");
 
-        List<string> cachePaths = new ();
+        List<string> cachePaths = new();
 
         Caching.GetAllCachePaths(cachePaths);
         foreach (var path in cachePaths)
         {
-            GUILayout.BeginHorizontal();
+            EditorGUILayout.BeginHorizontal();
 
             GUILayout.TextField(path);
             if (GUILayout.Button("<-- Clear this Cache"))
@@ -41,10 +41,10 @@ public class AddressablesCacheDebugger : EditorWindow
                 Debug.Log("Cleared cache: " + cleared);
             }
 
-            GUILayout.EndHorizontal();
+            EditorGUILayout.EndHorizontal();
         }
 
-        GUILayout.Space(10);
+        EditorGUILayout.Space(10);
 
         if (GUILayout.Button("Clear All Caches"))
         {
