@@ -36,7 +36,7 @@ MonoBehaviour:
     - m_Suffix: CcdBucketId
       m_Value: 76d7c7d4-b095-4c57-bd9e-697818b55e4e
     - m_Suffix: CcdBucketName
-      m_Value: CCD_Workshop
+      m_Value: CCD_Workshop_Windows
     - m_Suffix: Environmentid
       m_Value: 0d3204d7-8677-4d3c-a2ce-0986c7e61a26
     - m_Suffix: Environmentname
@@ -54,7 +54,7 @@ MonoBehaviour:
     - m_Suffix: CcdBucketId
       m_Value: f1044114-42cd-4106-81f7-8bd7afc88bf6
     - m_Suffix: CcdBucketName
-      m_Value: CCD_2_
+      m_Value: CCD_Workshop_OSX
     - m_Suffix: Environmentid
       m_Value: 0d3204d7-8677-4d3c-a2ce-0986c7e61a26
     - m_Suffix: Environmentname

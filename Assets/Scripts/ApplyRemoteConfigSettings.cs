@@ -22,7 +22,9 @@ public class ApplyRemoteConfigSettings : MonoBehaviour
 
     // References to Start and Store text components
     public GameObject StartButtonText;
-    public GameObject StoreButtonText; 
+    public GameObject StoreButtonText;
+
+    public bool useRemoteConfig = true;
 
     public struct userAttributes
     {
@@ -84,6 +86,9 @@ public class ApplyRemoteConfigSettings : MonoBehaviour
         // Can also be saved via Cloud Save or a Server 
         uaStruct.score = 10;
 
+        if (!useRemoteConfig)
+            return;
+
         // Fetch the Dashboard Remote Config from RemoteConfigManager    
         // We also append the userAttributes and appAttributes struct in our Fetch request
         RemoteConfigService.Instance.FetchConfigs<userAttributes, appAttributes>(uaStruct, new appAttributes(){});
@@ -140,6 +145,9 @@ public class ApplyRemoteConfigSettings : MonoBehaviour
     // Public function for access outside of the class
     public void FetchConfigs()
     {
+        if (!useRemoteConfig)
+            return;
+
         RemoteConfigService.Instance.FetchConfigs(
             new userAttributes(){},
             new appAttributes(){});

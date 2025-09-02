@@ -313,10 +313,11 @@ MonoBehaviour:
   language: English
   season: Default
   characterSize: 2
-  characterSpeed: 2
+  characterSpeed: 3
   activeHat: 0
   StartButtonText: {fileID: 454594787}
   StoreButtonText: {fileID: 830688787}
+  useRemoteConfig: 1
 --- !u!1 &830688787
 GameObject:
   m_ObjectHideFlags: 0
