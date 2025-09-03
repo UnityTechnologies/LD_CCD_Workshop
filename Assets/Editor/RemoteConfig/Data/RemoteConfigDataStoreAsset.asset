@@ -12,36 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"06a3d7f8-8bef-4686-b144-481eff7c739d\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"ActiveHat\",\r\n      \"type\": \"int\",\r\n     
-    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"cddeaff1-bfc6-4e50-869c-439f7685d8c9\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"Language\",\r\n      \"type\": \"string\",\r\n      \"value\": \"Spanish\"\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"96601c8d-7b82-4438-8c94-681552665090\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"CharacterSize\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 1.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"666c4cf7-6f5d-4eb6-a5f7-e97614451d30\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"CharacterSpeed\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    5.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"22bbed8d-e893-4b4d-87ae-6030cfb54ca7\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"Season\",\r\n      \"type\": \"string\",\r\n     
-    \"value\": \"Default\"\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"06a3d7f8-8bef-4686-b144-481eff7c739d\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"ActiveHat\",\r\n      \"type\": \"int\",\r\n     
-    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"cddeaff1-bfc6-4e50-869c-439f7685d8c9\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"Language\",\r\n      \"type\": \"string\",\r\n      \"value\": \"Spanish\"\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"96601c8d-7b82-4438-8c94-681552665090\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"CharacterSize\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 1.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"666c4cf7-6f5d-4eb6-a5f7-e97614451d30\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"CharacterSpeed\",\r\n      \"type\": \"float\",\r\n      \"value\":
-    5.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"22bbed8d-e893-4b4d-87ae-6030cfb54ca7\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"Season\",\r\n      \"type\": \"string\",\r\n     
-    \"value\": \"Default\"\r\n    }\r\n  }\r\n]"
-  _environments: "[\r\n  {\r\n    \"projectId\": \"be56a657-998d-48eb-90bb-b32afeaca892\",\r\n   
-    \"name\": \"production\",\r\n    \"id\": \"28dc5cbc-2183-4efb-8ea7-3fb99177f3aa\",\r\n   
-    \"isDefault\": true,\r\n    \"createdAt\": \"2025-08-22T22:00:39Z\",\r\n    \"updatedAt\":
-    \"2025-08-22T22:00:39Z\"\r\n  },\r\n  {\r\n    \"projectId\": \"be56a657-998d-48eb-90bb-b32afeaca892\",\r\n   
-    \"name\": \"development\",\r\n    \"id\": \"0d3204d7-8677-4d3c-a2ce-0986c7e61a26\",\r\n   
-    \"isDefault\": false,\r\n    \"createdAt\": \"2025-08-22T22:48:27Z\",\r\n   
-    \"updatedAt\": \"2025-08-22T22:48:27Z\"\r\n  }\r\n]"
+  _rsKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"c27dd707-99f1-444d-9d91-3ba3036b9936\"\n   
+    },\n    \"rs\": {\n      \"key\": \"ActiveHat\",\n      \"type\": \"int\",\n     
+    \"value\": 2\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"dee382d5-30b6-4a34-9b88-81770673d199\"\n   
+    },\n    \"rs\": {\n      \"key\": \"Language\",\n      \"type\": \"string\",\n     
+    \"value\": \"Spanish\"\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\":
+    \"8ac680ba-5439-4b90-9c79-211a4b65eb50\"\n    },\n    \"rs\": {\n      \"key\":
+    \"CharacterSize\",\n      \"type\": \"float\",\n      \"value\": 1.0\n    }\n 
+    },\n  {\n    \"metadata\": {\n      \"entityId\": \"1243b64b-ffcc-4f63-b9ac-a961a6ab0d72\"\n   
+    },\n    \"rs\": {\n      \"key\": \"CharacterSpeed\",\n      \"type\": \"float\",\n     
+    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"e63819f4-e21b-4f60-a773-cbf6b6fd4460\"\n   
+    },\n    \"rs\": {\n      \"key\": \"Season\",\n      \"type\": \"string\",\n     
+    \"value\": \"Default\"\n    }\n  }\n]"
+  _rsLastCachedKeyList: "[\n  {\n    \"metadata\": {\n      \"entityId\": \"c27dd707-99f1-444d-9d91-3ba3036b9936\"\n   
+    },\n    \"rs\": {\n      \"key\": \"ActiveHat\",\n      \"type\": \"int\",\n     
+    \"value\": 2\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"dee382d5-30b6-4a34-9b88-81770673d199\"\n   
+    },\n    \"rs\": {\n      \"key\": \"Language\",\n      \"type\": \"string\",\n     
+    \"value\": \"Spanish\"\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\":
+    \"8ac680ba-5439-4b90-9c79-211a4b65eb50\"\n    },\n    \"rs\": {\n      \"key\":
+    \"CharacterSize\",\n      \"type\": \"float\",\n      \"value\": 1.0\n    }\n 
+    },\n  {\n    \"metadata\": {\n      \"entityId\": \"1243b64b-ffcc-4f63-b9ac-a961a6ab0d72\"\n   
+    },\n    \"rs\": {\n      \"key\": \"CharacterSpeed\",\n      \"type\": \"float\",\n     
+    \"value\": 5.0\n    }\n  },\n  {\n    \"metadata\": {\n      \"entityId\": \"e63819f4-e21b-4f60-a773-cbf6b6fd4460\"\n   
+    },\n    \"rs\": {\n      \"key\": \"Season\",\n      \"type\": \"string\",\n     
+    \"value\": \"Default\"\n    }\n  }\n]"
+  _environments: "[\n  {\n    \"projectId\": \"be56a657-998d-48eb-90bb-b32afeaca892\",\n   
+    \"name\": \"production\",\n    \"id\": \"28dc5cbc-2183-4efb-8ea7-3fb99177f3aa\",\n   
+    \"isDefault\": true,\n    \"createdAt\": \"2025-08-22T22:00:39Z\",\n    \"updatedAt\":
+    \"2025-08-22T22:00:39Z\"\n  },\n  {\n    \"projectId\": \"be56a657-998d-48eb-90bb-b32afeaca892\",\n   
+    \"name\": \"development\",\n    \"id\": \"0d3204d7-8677-4d3c-a2ce-0986c7e61a26\",\n   
+    \"isDefault\": false,\n    \"createdAt\": \"2025-08-22T22:48:27Z\",\n    \"updatedAt\":
+    \"2025-08-22T22:48:27Z\"\n  }\n]"
