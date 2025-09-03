@@ -10,6 +10,9 @@ public class PlayerConfigurator : MonoBehaviour
     [SerializeField]
     private Transform m_HatAnchor;
 
+    [SerializeField]
+    private GameObject m_HatPrefab;
+    
     private AsyncOperationHandle m_HatLoadingHandle;
 
     private ApplyRemoteConfigSettings remoteConfigScript;
@@ -65,9 +68,12 @@ public class PlayerConfigurator : MonoBehaviour
     {
         // We are using the InstantiateAsync function on the Addressables API, the non-Addressables way 
         // looks something like the following line, however, this version is not Asynchronous
-        // GameObject.Instantiate(prefabToInstantiate);
+        m_HatInstance = Instantiate(m_HatPrefab, m_HatAnchor);
+        
+        /*
         m_HatLoadingHandle = Addressables.InstantiateAsync(hatKey, m_HatAnchor, false);
         m_HatLoadingHandle.Completed += OnHatInstantiated;
+        */
     }
 
     private void OnHatInstantiated(AsyncOperationHandle obj)

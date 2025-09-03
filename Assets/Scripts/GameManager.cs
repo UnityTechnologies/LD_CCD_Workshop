@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             "LoadingScene",
             UnityEngine.SceneManagement.LoadSceneMode.Single,
             true);
-            */
+        */
     }
 
     public static void LevelCompleted()

@@ -313,7 +313,7 @@ MonoBehaviour:
   language: English
   season: Default
   characterSize: 2
-  characterSpeed: 3
+  characterSpeed: 5
   activeHat: 0
   StartButtonText: {fileID: 454594787}
   StoreButtonText: {fileID: 830688787}
