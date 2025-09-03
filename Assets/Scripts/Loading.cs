@@ -17,7 +17,9 @@ public class Loading : MonoBehaviour
 
     void OnEnable()
     {
-        m_SceneHandle = Addressables.DownloadDependenciesAsync("Level_0" + GameManager.s_CurrentLevel);
+        m_SceneHandle = 
+            Addressables.DownloadDependenciesAsync("Level_0" + GameManager.s_CurrentLevel);
+
         m_SceneHandle.Completed += OnSceneLoaded;
     }
 

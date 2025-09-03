@@ -146,9 +146,10 @@ public class PlayerController : MonoBehaviour
 
         // rotation
         m_Rigidbody.transform.LookAt(m_HitInfo.point, Vector3.up);
+
         // lock rotation to y 
         Vector3 eulerAngle = m_Rigidbody.transform.eulerAngles;
-        m_Rigidbody.transform.eulerAngles = new Vector3(0, eulerAngle.y, 0);
+        m_Rigidbody.transform.eulerAngles = new Vector3(0f, eulerAngle.y, 0f);
 
         // calculate move direction vector
         Vector3 movementDirection = m_HitInfo.point - m_Rigidbody.position;
@@ -167,7 +168,10 @@ public class PlayerController : MonoBehaviour
     public void SetCharacterSize(float size)
     {
         m_CharacterSize = size;
-        gameObject.transform.localScale = new Vector3(m_CharacterSize,m_CharacterSize,m_CharacterSize);
+
+        gameObject.transform.localScale = 
+            new Vector3(m_CharacterSize,m_CharacterSize,m_CharacterSize);
+
         Debug.Log("Local Scale Set! " + gameObject.transform.localScale);
     }
 }

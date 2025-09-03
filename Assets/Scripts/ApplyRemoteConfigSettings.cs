@@ -91,7 +91,9 @@ public class ApplyRemoteConfigSettings : MonoBehaviour
 
         // Fetch the Dashboard Remote Config from RemoteConfigManager    
         // We also append the userAttributes and appAttributes struct in our Fetch request
-        RemoteConfigService.Instance.FetchConfigs<userAttributes, appAttributes>(uaStruct, new appAttributes(){});
+        RemoteConfigService.Instance.FetchConfigs<userAttributes, appAttributes>(
+            uaStruct,
+            new appAttributes(){});
 
         // Optional Settings
         // Set the user’s unique ID:

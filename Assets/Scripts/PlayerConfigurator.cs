@@ -65,7 +65,8 @@ public class PlayerConfigurator : MonoBehaviour
 
     private void OnHatInstantiated(AsyncOperationHandle obj)
     {
-        // We can check for the status of the InstantiationAsync operation: Failed, Succeeded or None
+        // We can check for the status of the InstantiationAsync operation:
+        // Failed, Succeeded or None
         if(obj.Status == AsyncOperationStatus.Succeeded)
         {
             Debug.Log("Hat instantiated successfully");
