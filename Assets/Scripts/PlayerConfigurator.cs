@@ -23,14 +23,13 @@ public class PlayerConfigurator : MonoBehaviour
         //If the condition is met, then a hat has been unlocked
         if(GameManager.s_ActiveHat >= 0)
         {
-            //SetHat(string.Format("Hat{0:00}", UnityEngine.Random.Range(0, 4)));
-
             // Fetch the correct hat variable from the ApplyRemoteConfigSettings instance
             if (ApplyRemoteConfigSettings.Instance.season == "Default")
             {
-               //Debug.Log("Formatted String 2 " + string.Format("Hat{0:00}", remoteConfigScript.activeHat));
+                SetHat(string.Format("Hat{0:00}", UnityEngine.Random.Range(0, 4)));
 
-                SetHat(string.Format("Hat{0:00}", remoteConfigScript.activeHat));
+                //Debug.Log("Formatted String 2 " + string.Format("Hat{0:00}", remoteConfigScript.activeHat));
+                //SetHat(string.Format("Hat{0:00}", remoteConfigScript.activeHat));
             }
 
             else if (ApplyRemoteConfigSettings.Instance.season == "Winter")
