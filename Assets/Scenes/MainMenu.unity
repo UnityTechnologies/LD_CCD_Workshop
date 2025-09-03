@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   language: English
   season: Default
-  characterSize: 2
+  characterSize: 1
   characterSpeed: 5
   activeHat: 0
   StartButtonText: {fileID: 454594787}
