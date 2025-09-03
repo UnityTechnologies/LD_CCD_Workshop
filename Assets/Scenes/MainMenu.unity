@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 743630119}
   - component: {fileID: 743630120}
   m_Layer: 0
-  m_Name: RemoteConfigGO
+  m_Name: GameConfigurations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
