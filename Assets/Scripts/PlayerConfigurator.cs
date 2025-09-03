@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceLocations;
 
 // Used for the Hat selection logic
 public class PlayerConfigurator : MonoBehaviour
@@ -11,6 +13,11 @@ public class PlayerConfigurator : MonoBehaviour
     private AsyncOperationHandle m_HatLoadingHandle;
 
     private ApplyRemoteConfigSettings remoteConfigScript;
+
+    private GameObject m_HatInstance;
+    private AsyncOperationHandle<IList<IResourceLocation>> m_HatsLocationsOpHandle;
+    private AsyncOperationHandle<GameObject> m_HatLoadOpHandle;
+    private readonly List<string> m_Keys = new() { "Hats", "Halloween" };
 
     void Start()
     {   
@@ -26,7 +33,7 @@ public class PlayerConfigurator : MonoBehaviour
             // Fetch the correct hat variable from the ApplyRemoteConfigSettings instance
             if (ApplyRemoteConfigSettings.Instance.season == "Default")
             {
-                SetHat(string.Format("Hat{0:00}", UnityEngine.Random.Range(0, 4)));
+                SetHat(string.Format("Hat{0:00}", Random.Range(0, 4)));
 
                 //Debug.Log("Formatted String 2 " + string.Format("Hat{0:00}", remoteConfigScript.activeHat));
                 //SetHat(string.Format("Hat{0:00}", remoteConfigScript.activeHat));
@@ -39,7 +46,14 @@ public class PlayerConfigurator : MonoBehaviour
 
             else if (ApplyRemoteConfigSettings.Instance.season == "Halloween")
             {
-                SetHat(string.Format("Hat{0:00}", "05"));
+                //SetHat(string.Format("Hat{0:00}", "05"));
+
+                // loading resources based on halloween season
+                m_HatsLocationsOpHandle = Addressables.LoadResourceLocationsAsync(
+                    m_Keys,
+                    Addressables.MergeMode.Intersection);
+
+                m_HatsLocationsOpHandle.Completed += OnHatLocationsLoadComplete;
             }
 
             //hatKey is an Addressable Label
@@ -57,11 +71,6 @@ public class PlayerConfigurator : MonoBehaviour
         m_HatLoadingHandle.Completed += OnHatInstantiated;
     }
 
-    private void OnDisable()
-    {
-        m_HatLoadingHandle.Completed -= OnHatInstantiated;
-    }
-
     private void OnHatInstantiated(AsyncOperationHandle obj)
     {
         // We can check for the status of the InstantiationAsync operation:
@@ -72,5 +81,45 @@ public class PlayerConfigurator : MonoBehaviour
         }
 
         m_HatLoadingHandle.Completed -= OnHatInstantiated;
+    }
+
+    private void OnHatLocationsLoadComplete(
+        AsyncOperationHandle<IList<IResourceLocation>> asyncOperationHandle)
+    {
+        Debug.Log("AsyncOperationHandle Status: " + asyncOperationHandle.Status);
+
+        if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
+        {
+            IList<IResourceLocation> results = asyncOperationHandle.Result;
+            for (int i = 0; i < results.Count; i++)
+            {
+                Debug.Log("Hat: " + results[i].PrimaryKey);
+            }
+
+            LoadInRandomHat(results);
+        }
+    }
+
+    private void LoadInRandomHat(IList<IResourceLocation> resourceLocations)
+    {
+        int randomIndex = Random.Range(0, resourceLocations.Count);
+        IResourceLocation randomHatPrefab = resourceLocations[randomIndex];
+
+        m_HatLoadOpHandle = Addressables.LoadAssetAsync<GameObject>(randomHatPrefab);
+        m_HatLoadOpHandle.Completed += OnHatLoadComplete;
+    }
+
+    private void OnHatLoadComplete(AsyncOperationHandle<GameObject> asyncOperationHandle)
+    {
+        if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
+        {
+            m_HatInstance = Instantiate(asyncOperationHandle.Result, m_HatAnchor);
+        }
+    }
+
+    private void OnDisable()
+    {
+        m_HatLoadingHandle.Completed -= OnHatInstantiated;
+        m_HatsLocationsOpHandle.Completed -= OnHatLocationsLoadComplete;
     }
 }
