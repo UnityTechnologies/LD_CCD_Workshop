@@ -67,7 +67,6 @@ public class PlayerConfigurator : MonoBehaviour
         // looks something like the following line, however, this version is not Asynchronous
         // GameObject.Instantiate(prefabToInstantiate);
         m_HatLoadingHandle = Addressables.InstantiateAsync(hatKey, m_HatAnchor, false);
-
         m_HatLoadingHandle.Completed += OnHatInstantiated;
     }
 

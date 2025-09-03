@@ -317,7 +317,7 @@ MonoBehaviour:
   activeHat: 0
   StartButtonText: {fileID: 454594787}
   StoreButtonText: {fileID: 830688787}
-  useRemoteConfig: 1
+  useRemoteConfig: 0
 --- !u!1 &830688787
 GameObject:
   m_ObjectHideFlags: 0
