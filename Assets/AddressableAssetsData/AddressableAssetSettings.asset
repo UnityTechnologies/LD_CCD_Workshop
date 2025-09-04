@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 908b434eb41181040a446a89e71b95e0
   m_currentHash:
     serializedVersion: 2
-    Hash: 8dc3013a84b89e9750276fa8dfa61959
+    Hash: 4e64a37457d56be2f254c527a17348dd
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
     - default
     - Hats
     - Halloween
+    - Winter
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 872d337e3255e7249bc685390fff2428, type: 2}
