@@ -12,12 +12,15 @@ public class PlayerConfigurator : MonoBehaviour
 
     [SerializeField]
     private GameObject m_HatPrefab;
-    
-    private AsyncOperationHandle m_HatLoadingHandle;
-
-    private ApplyRemoteConfigSettings remoteConfigScript;
-
     private GameObject m_HatInstance;
+    
+    // property to retrieve game configuration values
+    private ApplyRemoteConfigSettings remoteConfigScript;
+    
+    // Addressable async operation to retrieve a prefab
+    private AsyncOperationHandle m_HatLoadingHandle;
+    
+    // Addressable async operation to retrieve resource locations
     private AsyncOperationHandle<IList<IResourceLocation>> m_HatsLocationsOpHandle;
     private AsyncOperationHandle<GameObject> m_HatLoadOpHandle;
     private readonly List<string> m_Keys = new() { "Hats", "Halloween" };
