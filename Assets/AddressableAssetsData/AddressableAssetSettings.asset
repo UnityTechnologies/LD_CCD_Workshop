@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 908b434eb41181040a446a89e71b95e0
   m_currentHash:
     serializedVersion: 2
-    Hash: 4e64a37457d56be2f254c527a17348dd
+    Hash: 1c08859d5631ea07ab8189131e53b496
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
@@ -33,6 +33,7 @@ MonoBehaviour:
   m_UniqueBundleIds: 0
   m_EnableJsonCatalog: 0
   m_NonRecursiveBuilding: 1
+  m_AllowNestedBundleFolders: 0
   m_CCDEnabled: 1
   m_CcdLogRequests: 0
   m_CcdLogRequestHeaders: 0
@@ -43,6 +44,7 @@ MonoBehaviour:
   m_BundleRedirectLimit: -1
   m_SharedBundleSettings: 0
   m_SharedBundleSettingsCustomGroupIndex: 0
+  m_simulatedLoadDelay: 0.1
   m_ContiguousBundles: 0
   m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
@@ -160,7 +162,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b099015236a2de04e8df62f0783cc84a, type: 2}
   - {fileID: 11400000, guid: c3e9811d49fad99468e755a4c043de51, type: 2}
   - {fileID: 11400000, guid: ba618cb335f06414f80a6fe0946f0bce, type: 2}
-  m_ActiveProfileId: b6fee70e16e855041be32a2d1a9f6855
+  m_ActiveProfileId: 5e17ed4ea5ea37d42907496dccf22d0c
   m_CcdManagedData:
     EnvironmentId: 
     EnvironmentName: 

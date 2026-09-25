@@ -23,13 +23,12 @@ public class Loading : MonoBehaviour
         m_SceneManagerHandle = SceneManager.LoadSceneAsync(
             "Level_0" + GameManager.s_CurrentLevel,
             LoadSceneMode.Single);
-        
-        /* Addressables way!
-        m_SceneHandle =
-            Addressables.DownloadDependenciesAsync("Level_0" + GameManager.s_CurrentLevel);
 
-        m_SceneHandle.Completed += OnSceneLoaded;
-        */
+        // Addressables way!
+        //m_SceneHandle =
+        //    Addressables.DownloadDependenciesAsync("Level_0" + GameManager.s_CurrentLevel);
+        //
+        //m_SceneHandle.Completed += OnSceneLoaded;
     }
 
     private void OnDisable()
@@ -113,9 +112,12 @@ public class Loading : MonoBehaviour
     {
         // We don't need to check for this value every single frame,
         // and certainly not after the scene has been loaded
-        
+
         //m_LoadingSlider.value = m_SceneHandle.GetDownloadStatus().Percent;
-        
-        m_LoadingSlider.value = m_LoadingSlider.maxValue * m_SceneManagerHandle.progress;
+
+        if (m_SceneManagerHandle != null)
+        {
+            m_LoadingSlider.value = m_LoadingSlider.maxValue * m_SceneManagerHandle.progress;
+        }
     }
 }
