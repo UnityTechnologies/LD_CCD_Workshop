@@ -10,13 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Level 01
+  m_Name: Remote Levels
   m_EditorClassIdentifier: 
-  m_GroupName: Level 01
+  m_GroupName: Remote Levels
   m_GUID: 0c3e7ea331eb9384a88f40ba4c9be250
   m_SerializeEntries:
+  - m_GUID: 03d0fe3f4c117ad4ba958794ccfc3ac6
+    m_Address: Level_04
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29c1d8c3070b4e441ab2c21e14128a7b
+    m_Address: Level_03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 952b5b04d0205ba4084c9256369178ae
     m_Address: Level_01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e40f8e5164d7a3b49a53720406e42408
+    m_Address: Level_02
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
