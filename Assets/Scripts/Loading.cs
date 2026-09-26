@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//#define USE_ADDRESSABLES
+
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -20,15 +22,18 @@ public class Loading : MonoBehaviour
 
     void OnEnable()
     {
+
+#if !USE_ADDRESSABLES
         m_SceneManagerHandle = SceneManager.LoadSceneAsync(
             "Level_0" + GameManager.s_CurrentLevel,
             LoadSceneMode.Single);
-
+#else
         // Addressables way!
-        //m_SceneHandle =
-        //    Addressables.DownloadDependenciesAsync("Level_0" + GameManager.s_CurrentLevel);
-        //
-        //m_SceneHandle.Completed += OnSceneLoaded;
+        m_SceneHandle =
+            Addressables.DownloadDependenciesAsync("Level_0" + GameManager.s_CurrentLevel);
+        
+        m_SceneHandle.Completed += OnSceneLoaded;
+#endif
     }
 
     private void OnDisable()
@@ -112,12 +117,13 @@ public class Loading : MonoBehaviour
     {
         // We don't need to check for this value every single frame,
         // and certainly not after the scene has been loaded
-
-        //m_LoadingSlider.value = m_SceneHandle.GetDownloadStatus().Percent;
-
+#if !USE_ADDRESSABLES
         if (m_SceneManagerHandle != null)
         {
             m_LoadingSlider.value = m_LoadingSlider.maxValue * m_SceneManagerHandle.progress;
         }
+#else
+        m_LoadingSlider.value = m_SceneHandle.GetDownloadStatus().Percent;
+#endif
     }
 }

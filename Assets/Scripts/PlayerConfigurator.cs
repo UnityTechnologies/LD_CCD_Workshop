@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿//#define USE_ADDRESSABLES
+
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -69,14 +71,14 @@ public class PlayerConfigurator : MonoBehaviour
 
     public void SetHat(string hatKey)
     {
+#if !USE_ADDRESSABLES
         // We are using the InstantiateAsync function on the Addressables API, the non-Addressables way 
         // looks something like the following line, however, this version is not Asynchronous
         m_HatInstance = Instantiate(m_HatPrefab, m_HatAnchor);
-        
-        /*
+#else        
         m_HatLoadingHandle = Addressables.InstantiateAsync(hatKey, m_HatAnchor, false);
         m_HatLoadingHandle.Completed += OnHatInstantiated;
-        */
+#endif
     }
 
     private void OnHatInstantiated(AsyncOperationHandle obj)
