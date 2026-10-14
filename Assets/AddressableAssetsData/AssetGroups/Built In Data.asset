@@ -20,3 +20,7 @@ MonoBehaviour:
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 83ef5032b53d60f4bb960b2a257e8fb5, type: 2}
+    m_SchemaDisplayOrder:
+    - Built In Data_PlayerDataGroupSchema
+  m_IncludeInBuild: 1
+  m_IncludeInBuildMigrated: 1

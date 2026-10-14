@@ -98,10 +98,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4494805130079759894}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -133,6 +133,10 @@ MonoBehaviour:
   m_HatAnchor: {fileID: 1946178409}
   m_HatPrefab: {fileID: 8249111256857059732, guid: b53baa10142cbb346a47ab071d32889a,
     type: 3}
+  m_HatPrefabs:
+  - {fileID: 8249111256857059732, guid: b53baa10142cbb346a47ab071d32889a, type: 3}
+  - {fileID: 5166224616317297372, guid: 6e65281e8a345ff4ea1b73f2a1578a6d, type: 3}
+  - {fileID: 6774698051306351897, guid: 6c93cb6413eaf5f46bbe190dbbad2651, type: 3}
 --- !u!114 &8083381679980500539
 MonoBehaviour:
   m_ObjectHideFlags: 0

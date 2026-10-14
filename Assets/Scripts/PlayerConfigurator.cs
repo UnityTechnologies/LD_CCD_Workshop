@@ -12,8 +12,11 @@ public class PlayerConfigurator : MonoBehaviour
     [SerializeField]
     private Transform m_HatAnchor;
 
+#if !USE_ADDRESSABLES
     [SerializeField]
-    private GameObject m_HatPrefab;
+    private List<GameObject> m_HatPrefabs;
+#endif
+
     private GameObject m_HatInstance;
     
     // property to retrieve game configuration values
@@ -74,7 +77,10 @@ public class PlayerConfigurator : MonoBehaviour
 #if !USE_ADDRESSABLES
         // We are using the InstantiateAsync function on the Addressables API, the non-Addressables way 
         // looks something like the following line, however, this version is not Asynchronous
-        m_HatInstance = Instantiate(m_HatPrefab, m_HatAnchor);
+        int randomHatIndex = Random.Range(0, m_HatPrefabs.Count);
+        var randomHatPrefab = m_HatPrefabs[randomHatIndex];
+
+        m_HatInstance = Instantiate(randomHatPrefab, m_HatAnchor);
 #else        
         m_HatLoadingHandle = Addressables.InstantiateAsync(hatKey, m_HatAnchor, false);
         m_HatLoadingHandle.Completed += OnHatInstantiated;
