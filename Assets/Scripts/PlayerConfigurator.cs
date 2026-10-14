@@ -44,7 +44,7 @@ public class PlayerConfigurator : MonoBehaviour
             // Fetch the correct hat variable from the ApplyRemoteConfigSettings instance
             if (ApplyRemoteConfigSettings.Instance.season == "Default")
             {
-                SetHat(string.Format("Hat{0:00}", Random.Range(0, 4)));
+                SetHat(string.Format("Hat{0:00}", Random.Range(0, 6)));
 
                 //Debug.Log("Formatted String 2 " + string.Format("Hat{0:00}", remoteConfigScript.activeHat));
                 //SetHat(string.Format("Hat{0:00}", remoteConfigScript.activeHat));
